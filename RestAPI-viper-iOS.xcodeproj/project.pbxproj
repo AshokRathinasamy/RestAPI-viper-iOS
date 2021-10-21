@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,14 @@
 		F9179336271EAC2600B195C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9179334271EAC2600B195C0 /* Main.storyboard */; };
 		F9179338271EAC2900B195C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9179337271EAC2900B195C0 /* Assets.xcassets */; };
 		F917933B271EAC2900B195C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9179339271EAC2900B195C0 /* LaunchScreen.storyboard */; };
+		F973A774272164A700F85FF9 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973A773272164A700F85FF9 /* AppConstants.swift */; };
+		F973A779272164D500F85FF9 /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973A778272164D500F85FF9 /* AppUtils.swift */; };
+		F973A77D2721650200F85FF9 /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973A77C2721650200F85FF9 /* ProgressIndicator.swift */; };
+		F973A792272166CD00F85FF9 /* NoticeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973A791272166CD00F85FF9 /* NoticeRouter.swift */; };
+		F973A797272166E700F85FF9 /* NoticeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973A796272166E700F85FF9 /* NoticeProtocols.swift */; };
+		F973A79A272166FB00F85FF9 /* NoticePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973A799272166FB00F85FF9 /* NoticePresenter.swift */; };
+		F973A79D2721672300F85FF9 /* NoticeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973A79C2721672300F85FF9 /* NoticeInteractor.swift */; };
+		F973A7A12721676500F85FF9 /* NoticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973A7A02721676500F85FF9 /* NoticeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +36,14 @@
 		F9179337271EAC2900B195C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F917933A271EAC2900B195C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F917933C271EAC2900B195C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F973A773272164A700F85FF9 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		F973A778272164D500F85FF9 /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
+		F973A77C2721650200F85FF9 /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
+		F973A791272166CD00F85FF9 /* NoticeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeRouter.swift; sourceTree = "<group>"; };
+		F973A796272166E700F85FF9 /* NoticeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeProtocols.swift; sourceTree = "<group>"; };
+		F973A799272166FB00F85FF9 /* NoticePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticePresenter.swift; sourceTree = "<group>"; };
+		F973A79C2721672300F85FF9 /* NoticeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInteractor.swift; sourceTree = "<group>"; };
+		F973A7A02721676500F85FF9 /* NoticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +72,6 @@
 				1EBAD270DE31ADEE5205078D /* Pods-RestAPI-viper-iOS.debug.xcconfig */,
 				64F828B42DD863DAE4253FCC /* Pods-RestAPI-viper-iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +96,119 @@
 		F917932D271EAC2600B195C0 /* RestAPI-viper-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F917932E271EAC2600B195C0 /* AppDelegate.swift */,
-				F9179330271EAC2600B195C0 /* SceneDelegate.swift */,
-				F9179332271EAC2600B195C0 /* ViewController.swift */,
-				F9179334271EAC2600B195C0 /* Main.storyboard */,
+				F973A781272165C600F85FF9 /* app-modules */,
+				F973A7802721655100F85FF9 /* app-ui */,
+				F973A77F2721652800F85FF9 /* app-settings */,
+				F973A7712721645800F85FF9 /* common-utils */,
 				F9179337271EAC2900B195C0 /* Assets.xcassets */,
 				F9179339271EAC2900B195C0 /* LaunchScreen.storyboard */,
 				F917933C271EAC2900B195C0 /* Info.plist */,
 			);
 			path = "RestAPI-viper-iOS";
+			sourceTree = "<group>";
+		};
+		F973A7712721645800F85FF9 /* common-utils */ = {
+			isa = PBXGroup;
+			children = (
+				F973A777272164B700F85FF9 /* ui-utils */,
+				F973A7722721648700F85FF9 /* app-constants */,
+				F973A778272164D500F85FF9 /* AppUtils.swift */,
+			);
+			path = "common-utils";
+			sourceTree = "<group>";
+		};
+		F973A7722721648700F85FF9 /* app-constants */ = {
+			isa = PBXGroup;
+			children = (
+				F973A773272164A700F85FF9 /* AppConstants.swift */,
+			);
+			path = "app-constants";
+			sourceTree = "<group>";
+		};
+		F973A777272164B700F85FF9 /* ui-utils */ = {
+			isa = PBXGroup;
+			children = (
+				F973A77C2721650200F85FF9 /* ProgressIndicator.swift */,
+			);
+			path = "ui-utils";
+			sourceTree = "<group>";
+		};
+		F973A77F2721652800F85FF9 /* app-settings */ = {
+			isa = PBXGroup;
+			children = (
+				F9179330271EAC2600B195C0 /* SceneDelegate.swift */,
+				F917932E271EAC2600B195C0 /* AppDelegate.swift */,
+			);
+			path = "app-settings";
+			sourceTree = "<group>";
+		};
+		F973A7802721655100F85FF9 /* app-ui */ = {
+			isa = PBXGroup;
+			children = (
+				F9179332271EAC2600B195C0 /* ViewController.swift */,
+				F9179334271EAC2600B195C0 /* Main.storyboard */,
+			);
+			path = "app-ui";
+			sourceTree = "<group>";
+		};
+		F973A781272165C600F85FF9 /* app-modules */ = {
+			isa = PBXGroup;
+			children = (
+				F973A7822721662F00F85FF9 /* notice-module */,
+			);
+			path = "app-modules";
+			sourceTree = "<group>";
+		};
+		F973A7822721662F00F85FF9 /* notice-module */ = {
+			isa = PBXGroup;
+			children = (
+				F973A79F2721675300F85FF9 /* New Group */,
+				F973A7872721667300F85FF9 /* router */,
+				F973A7862721666300F85FF9 /* protocols */,
+				F973A7852721665700F85FF9 /* presenter */,
+				F973A7842721664C00F85FF9 /* interactor */,
+			);
+			path = "notice-module";
+			sourceTree = "<group>";
+		};
+		F973A7842721664C00F85FF9 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F973A79C2721672300F85FF9 /* NoticeInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		F973A7852721665700F85FF9 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F973A799272166FB00F85FF9 /* NoticePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		F973A7862721666300F85FF9 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F973A796272166E700F85FF9 /* NoticeProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		F973A7872721667300F85FF9 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				F973A791272166CD00F85FF9 /* NoticeRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		F973A79F2721675300F85FF9 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				F973A7A02721676500F85FF9 /* NoticeModel.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,9 +325,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F973A779272164D500F85FF9 /* AppUtils.swift in Sources */,
 				F9179333271EAC2600B195C0 /* ViewController.swift in Sources */,
+				F973A79D2721672300F85FF9 /* NoticeInteractor.swift in Sources */,
 				F917932F271EAC2600B195C0 /* AppDelegate.swift in Sources */,
+				F973A7A12721676500F85FF9 /* NoticeModel.swift in Sources */,
 				F9179331271EAC2600B195C0 /* SceneDelegate.swift in Sources */,
+				F973A797272166E700F85FF9 /* NoticeProtocols.swift in Sources */,
+				F973A792272166CD00F85FF9 /* NoticeRouter.swift in Sources */,
+				F973A79A272166FB00F85FF9 /* NoticePresenter.swift in Sources */,
+				F973A77D2721650200F85FF9 /* ProgressIndicator.swift in Sources */,
+				F973A774272164A700F85FF9 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +418,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -345,6 +473,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
